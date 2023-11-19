@@ -1,23 +1,10 @@
-const { MongoClient } = require("mongodb");
+const express = require ('express')
+const mongoose = require('mongoose')
+// CONFIGURATION
+require('dotenv').config()
+const PORT = process.env.PORT
+const app = express()
 
-// Replace the uri string with your connection string.
-const uri = "mongodb+srv://mernmovie:<password>@cluster0.waeidek.mongodb.net/";
-
-const client = new MongoClient(uri);
-
-async function run() {
-  try {
-    const database = client.db('sample_mflix');
-    const movies = database.collection('movies');
-
-    // Query for a movie that has the title 'Back to the Future'
-    const query = { title: 'Back to the Future' };
-    const movie = await movies.findOne(query);
-
-    console.log(movie);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
+  () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
+)
