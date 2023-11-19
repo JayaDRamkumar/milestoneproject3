@@ -13,3 +13,10 @@
 > Frontend Dependiencies:
 - bootstrap: enable responsive development of mobile-first websites, Bootstrap provides a collection of syntax for template designs
 - react-router-dom:route different urls to different pages on our site
+
+
+The app should have a README.md file including the following:
+Describes the inspiration for the application.
+Describes how to use the application.
+Lists the technologies used to build the application.
+Addresses any outstanding bugs or unfinished functionality.
