@@ -8,7 +8,6 @@ const ApplyNowForm = () => {
     socialsecurity: '',
   });
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -35,7 +34,36 @@ const ApplyNowForm = () => {
             onChange={handleChange}
           />
         </label>
-       
+
+        <label>
+          Phone Number:
+          <input
+            type="text"
+            name="phonenumber"
+            value={formData.phonenumber}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Over 18:
+          <input
+            type="text"
+            name="over18"
+            value={formData.over18}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Social Security:
+          <input
+            type="text"
+            name="socialsecurity"
+            value={formData.socialsecurity}
+            onChange={handleChange}
+          />
+        </label>
 
         <button type="submit">Submit</button>
       </form>
