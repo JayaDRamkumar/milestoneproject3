@@ -35,6 +35,6 @@ router.get('/locations', async (req, res) => {
     console.error('Error fecthing locations:', error)
     res.status(500).json({error: 'Unable to fetch locations'})
   }
-  })
+  }) 
 
 module.exports = router;
