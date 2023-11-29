@@ -6,6 +6,7 @@ const NewLocationForm = () => {
     address: '',
     bedrooms: '',
     bathrooms: '',
+    image: '',
   });
 
   const handleChange = (e) => {
@@ -61,6 +62,16 @@ const NewLocationForm = () => {
             type="number"
             name="bathrooms"
             value={formData.bathrooms}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <label>
+          Property Photos:
+          <input
+            type="image"
+            name="propertyimage"
+            value={formData.image}
             onChange={handleChange}
           />
         </label>

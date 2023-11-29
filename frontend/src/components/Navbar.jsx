@@ -10,7 +10,7 @@ function AppNavbar() {
       <Navbar.Brand as={Link} to="/">LR LAKE HOLDING INC</Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link as={Link} to="/">Home</Nav.Link>
-       
+        <Nav.Link as={Link} to="/">ApplyNowForm</Nav.Link>
 
       </Nav>
     
