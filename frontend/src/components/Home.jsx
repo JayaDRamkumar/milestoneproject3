@@ -43,6 +43,9 @@ function Home() {
         <p className="text">
             Zipcode {location.zipcode}, {location.bedroomsandbathrooms} Bedrooms and Bathrooms
         </p>
+        {/* <button onClick={() => editlocation(location._id)}>Edit</button>
+          <button onClick={() => deletelocation(location._id)}>Delete</button>
+          <button onClick={() => history.goBack()}>Go Back</button> */}
     </div>
 ));
 
