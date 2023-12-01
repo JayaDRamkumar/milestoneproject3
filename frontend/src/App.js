@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/location/:locationId" element={<LocationDetails />} />
         <Route path="/add-location" element={<AddLocation />} />
-        <Route path="/applynow" element={<ApplyNowForm />} />
+        <Route path="/apply-now" element={<ApplyNowForm />} />
       </Routes>
     </BrowserRouter>
   );
