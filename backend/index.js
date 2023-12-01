@@ -14,7 +14,13 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
+app.get ('/', (req, res) => {
+  console.log('hello world')
+  res.send('Hello Ric')
+})
 
 app.use('/locations', require('./controllers/locations.js'))
 
-// app.listen(process.env.PORT)
+app.listen(process.env.PORT, () => {
+  console.log('running at port:', process.env.PORT)
+})

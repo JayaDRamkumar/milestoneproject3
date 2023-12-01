@@ -39,13 +39,11 @@ function Home() {
             <Link to={`/location/${location._id}`}>{location.address}</Link>
         </h2>
         <p className="text">{location.state}</p>
+        <p className="text">{location.zipcode}</p>
         <img style={{ width: '200px' }} src={location.propertyimage} alt={location.address} />
-        <p className="text">
-            Zipcode {location.zipcode}, {location.bedroomsandbathrooms} Bedrooms and Bathrooms
+        <p className="text"> {location.bedroomsandbathrooms} 
         </p>
-        {/* <button onClick={() => editlocation(location._id)}>Edit</button>
-          <button onClick={() => deletelocation(location._id)}>Delete</button>
-          <button onClick={() => history.goBack()}>Go Back</button> */}
+        
     </div>
 ));
 
@@ -53,7 +51,7 @@ function Home() {
 
     return (
         <main>
-            <p>Welcome to my homepage!</p>
+        
             <div className="row">{locationFormatted}</div>
         </main>
     );

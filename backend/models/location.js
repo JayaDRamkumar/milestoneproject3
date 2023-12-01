@@ -7,7 +7,8 @@ const locationSchema = new mongoose.Schema({
   zipcode: { type: String, required: true },
   bedroomsandbathrooms: { type: String, required: true },
   price: { type: String, required: true },
-  applynow: [{type: mongoose.Schema.Types.ObjectId, ref: 'apply'}]
 });
 
-module.exports = mongoose.model('Locations', locationSchema);
+
+const location = mongoose.model('Location', locationSchema);
+module.exports = location
