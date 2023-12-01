@@ -1,37 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const NewLocationForm = () => {
-  const [formData, setFormData] = useState({
-    propertyName: '',
-    address: '',
-    bedrooms: '',
-    bathrooms: '',
-    image: '',
+function NewLocationForm() {
+  const navigate = useNavigate();
+  const [location, setLocation] = useState({
+    propertyimage: "",
+    address: "",
+    state: "",
+    zipcode: "",
+    bedroomsandbathrooms: "",
+    price: "",
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setLocation({
+      ...location,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+
+    await fetch("http://localhost:4000/locations", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(location),
+    });
+
+    navigate("/");
+  }
 
   return (
-    <div>
-      <h2>New Location Form</h2>
+    <main>
+      <h1>Add a New Location</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Property Name:
+          Property Image URL:
           <input
             type="text"
-            name="propertyName"
-            value={formData.propertyName}
+            name="propertyimage"
+            value={location.propertyimage}
             onChange={handleChange}
           />
         </label>
@@ -41,45 +52,55 @@ const NewLocationForm = () => {
           <input
             type="text"
             name="address"
-            value={formData.address}
+            value={location.address}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Number of Bedrooms:
+          State:
           <input
-            type="number"
-            name="bedrooms"
-            value={formData.bedrooms}
+            type="text"
+            name="state"
+            value={location.state}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Number of Bathrooms:
+          Zip Code:
           <input
-            type="number"
-            name="bathrooms"
-            value={formData.bathrooms}
+            type="text"
+            name="zipcode"
+            value={location.zipcode}
             onChange={handleChange}
           />
         </label>
         <br />
         <label>
-          Property Photos:
+          Bedrooms and Bathrooms:
           <input
-            type="image"
-            name="propertyimage"
-            value={formData.image}
+            type="text"
+            name="bedroomsandbathrooms"
+            value={location.bedroomsandbathrooms}
             onChange={handleChange}
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <label>
+          Price:
+          <input
+            type="text"
+            name="price"
+            value={location.price}
+            onChange={handleChange}
+          />
+        </label>
+        <br />
+        <button type="submit">Add Location</button>
       </form>
-    </div>
+    </main>
   );
-};
+}
 
 export default NewLocationForm;

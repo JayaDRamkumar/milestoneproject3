@@ -60,5 +60,27 @@ router.get('/', async (req, res) => {
       res.status(500).json({ error: 'Unable to fetch the location' });
     }
   });
+// Render the add location form page
+router.get('/add-location', (req, res) => {
+  console.log('Rendering add location form');
+  res.send('Render your add location form page here');
+});
+
+// Handle the form submission to add a new location
+router.post('/add-location', async (req, res) => {
+  console.log('Handling form submission for add location');
+  try {
+    let newLocation = new location(req.body);
+    await newLocation.save();
+    res.status(201).json(newLocation);
+  } catch (error) {
+    console.error('Error saving location:', error);
+    res.status(500).json({ error: 'Unable to save location' });
+  }
+});
 
 module.exports = router;
+
+
+
+
