@@ -40,16 +40,28 @@ function LocationDetails() {
     } else if (error) {
         detailsFormatted = <p>Error: {error.message}</p>;
     } else {
-        detailsFormatted = (
-            <div>
-                <h2>{locationDetails.address}</h2>
-                <p className="text">{locationDetails.state}</p>
-                <p className="text">{locationDetails.zipcode}</p>
-                <img style={{ width: '200px' }} src={locationDetails.propertyimage} alt={locationDetails.address} />
-                <p className="text">{locationDetails.bedroomsandbathrooms}</p>
-                <button onClick={handleApplyNow}>Apply Now</button>
-            </div>
-        );
+      // ... (existing code)
+
+detailsFormatted = (
+    <div className="details-container">
+      <div className="details-card">
+        <div className="details-circle">
+          <img src={locationDetails.propertyimage} alt={locationDetails.address} />
+        </div>
+        <div className="details-text">
+          <h2>{locationDetails.address}</h2>
+          <p className="text">{locationDetails.state}</p>
+          <p className="text">{locationDetails.zipcode}</p>
+          <p className="text">{locationDetails.bedroomsandbathrooms}</p>
+          <button onClick={handleApplyNow}>Apply Now</button>
+          
+        </div>
+      </div>
+    </div>
+  );
+  
+ 
+  
     }
 
     return (

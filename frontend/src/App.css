@@ -1,46 +1,128 @@
 h1 {
   text-align: center;
-  color: cornflowerblue;
+  color: rgb(34, 35, 36);
 }
 
 img {
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 nav {
-background-color: cornflowerblue;
-padding: 10px;
+  background-color: rgb(8, 8, 9);
+  padding: 10px;
+
+
 }
 
 nav ul {
-list-style-type: none;
-margin: 0;
+  list-style-type: none;
+  margin: 0;
+  
+
 }
 
 nav li {
-display: inline;
-margin-right: 25px;
+  display: inline;
+  margin-right: 25px;
 }
 
 nav a {
-color: white;
-font-size: 1.5em;
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s;
+  text-decoration: none;
+
 }
 
 nav a:hover {
-color: pink;
-text-decoration: none;
+  color: darkblue;
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: darkblue;
+  text-decoration: none;
 }
 
 body {
-background-color: lightblue;
-text-align: center;
+  background-color: lightblue;
+  text-align: center;
 }
 
 main {
-margin-right: 20px;
-margin-left: 20px;
-background-color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
 }
-/* .inline{} */
+
+// homepage css
+
+
+.no-underline {
+  text-decoration: none;
+}
+
+.location-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.location-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.location-box h2,
+.location-box p.text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.location-box h2 {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+// details page css 
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.details-card {
+  background-color: black;
+  color: white;
+  border-radius: 15px; /* Adjust the border-radius for curved edges */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a box shadow */
+}
+
+.details-circle img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Make the image circular */
+  margin-bottom: 10px;
+}
+
+.details-text {
+  text-align: center;
+}
+
+.details-text h2,
+.details-text p.text {
+  margin-bottom: 10px;
+}
+

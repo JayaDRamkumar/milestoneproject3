@@ -1,20 +1,17 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function AppNavbar() {
   return (
-
-    <Navbar bg="dark" variant="dark">
-      <Navbar.Brand as={Link} to="/">LR LAKE HOLDING INC</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link as={Link} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} to="/">ApplyNowForm</Nav.Link>
-
+    <Navbar className="navbar-custom" variant="dark">
+      <Navbar.Brand className="mr-auto" as={Link} to="/">LR LAKE HOLDING INC</Navbar.Brand>
+      <Nav>
+        <Nav.Link as={Link} to="/" className="mr-2">Home</Nav.Link>
+        {/* <Nav.Link as={Link} to="/apply-now">Apply Now</Nav.Link> */}
       </Nav>
-    
     </Navbar>
-  )
+  );
 }
 
-export default AppNavbar
+export default AppNavbar;

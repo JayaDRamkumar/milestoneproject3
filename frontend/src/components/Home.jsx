@@ -33,19 +33,20 @@ function Home() {
         locationFormatted = <p>Error: {error.message}</p>;
     } else {
 
-    locationFormatted = locations?.map((location) => (
-    <div className="col-sm-6" key={location._id}>
-        <h2>
-            <Link to={`/location/${location._id}`}>{location.address}</Link>
-        </h2>
-        <p className="text">{location.state}</p>
-        <p className="text">{location.zipcode}</p>
-        <img style={{ width: '200px' }} src={location.propertyimage} alt={location.address} />
-        <p className="text"> {location.bedroomsandbathrooms} 
-        </p>
-        
-    </div>
-));
+        locationFormatted = locations?.map((location) => (
+            <div className="col-sm-6 location-box" key={location._id}>
+              <img style={{ width: '100%' }} src={location.propertyimage} alt={location.address} />
+             
+                <h2 className="no-underline">
+                    <Link to={`/location/${location._id}`}>{location.address}</Link>
+                </h2>
+
+              <p className="text">{location.state}, {location.zipcode}</p>
+              <p className="text">{location.bedroomsandbathrooms}</p>
+            </div>
+          ));
+          
+          
 
     }
 

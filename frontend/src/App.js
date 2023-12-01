@@ -15,7 +15,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/location/:locationId" element={<LocationDetails />} />
-        {/* <Route path="/location" element={<LocationDetails />} /> */}
         <Route path="/newlocation" element={<NewLocationForm />} />
         <Route path="/applynow" element={<ApplyNowForm />} />
       </Routes>
