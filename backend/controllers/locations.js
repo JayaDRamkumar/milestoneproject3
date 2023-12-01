@@ -1,3 +1,4 @@
+const express = require('express');
 const router = require ('express').Router()
 const location = require('../models/location')
 const apply= require('../models/apply')
@@ -32,7 +33,7 @@ router.post('/', async (req, res) => {
         res.status(500).json({error: 'Unable to save location'});
     }
 });
-
+// Get all locations
 router.get('/', async (req, res) => {
     try{
     const locations = await location.find()
@@ -43,5 +44,21 @@ router.get('/', async (req, res) => {
     res.status(500).json({error: 'Unable to fetch locations'})
   }
   }) 
+
+  // get a single location
+  router.get('/:id', async (req, res) => {
+    try {
+      const locationById = await location.findById(req.params.id); 
+  
+      if (!locationById) {
+        return res.status(404).json({ error: 'Location not found' });
+      }
+  
+      res.json(locationById);
+    } catch (error) {
+      console.error('Error fetching a location by ID:', error);
+      res.status(500).json({ error: 'Unable to fetch the location' });
+    }
+  });
 
 module.exports = router;
