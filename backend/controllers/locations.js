@@ -1,7 +1,7 @@
 const express = require('express');
 const router = require ('express').Router()
 const location = require('../models/location')
-const apply= require('../models/apply')
+// const apply= require('../models/apply')
 
 router.post('/', async (req, res) => {
     if (!req.body.propertyimage) {
@@ -80,7 +80,3 @@ router.post('/add-location', async (req, res) => {
 });
 
 module.exports = router;
-
-
-
-

@@ -8,7 +8,8 @@ function AppNavbar() {
       <Navbar.Brand className="mr-auto" as={Link} to="/">LR LAKE HOLDING INC</Navbar.Brand>
       <Nav>
         <Nav.Link as={Link} to="/" className="mr-2">Home</Nav.Link>
-        {/* <Nav.Link as={Link} to="/apply-now">Apply Now</Nav.Link> */}
+        
+        <Nav.Link as={Link} to="/myapplications">My Applications</Nav.Link>
       </Nav>
     </Navbar>
   );
