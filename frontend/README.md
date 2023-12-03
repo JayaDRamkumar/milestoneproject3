@@ -15,14 +15,16 @@ Technologies used to build Application
 - dotenv: create environment variables in a . env file instead of putting them in code.
 - nodemon: command-line tool that helps with development of Node. js applications. It monitors the project directory and automatically restarts your node application when it detects any changes.
 
-> Frontend Dependiencies:
+> Frontend Dependencies:
 - react-router-dom:route different urls to different pages on our site
 
+
 > How to Use Application:
- - Open 2 command prompts.
+- Open 2 command prompts.
 - Navigate to "backend" folder and run ~nodemon start to start the backend.
 - Navigate to "frontend" folder and run ~npm start to start the front end.
-- Your browser will open up to your localhost and you will be brought to the homepage.
+- Your browser will open to localhost, and you will be brought to the homepage.
+
 
 Outstanding bugs or unfinished functionality
 - My application page does not have a working database in which when you apply for a house/ apartment it does not submit. I would like to implement that.

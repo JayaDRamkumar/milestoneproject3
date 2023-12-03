@@ -1,6 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 
+
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -11,9 +12,9 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      <form>
+      <form className="login-form">
         <label>
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />

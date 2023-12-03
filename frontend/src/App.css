@@ -4,20 +4,20 @@ h1 {
 }
 
 img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 
 nav {
   background-color: rgb(8, 8, 9);
-  padding: 10px;
+  padding: 20px;
 
 
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 10;
   
 
 }
@@ -41,7 +41,7 @@ nav a:hover {
 }
 
 .navbar-custom .navbar-brand:hover {
-  color: darkblue;
+  color: rgb(52, 52, 178);
   text-decoration: none;
 }
 
@@ -53,7 +53,7 @@ body {
 main {
   margin-right: 20px;
   margin-left: 20px;
-  background-color: white;
+  background-color:rgb(237, 237, 242);
 }
 
 // homepage css
@@ -71,7 +71,7 @@ main {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: lightblue;
 }
 
 .location-box img {
@@ -88,7 +88,7 @@ main {
 }
 
 .location-box h2 {
-  background-color: cornflowerblue;
+  background-color: whitesmoke;
   color: white;
   padding: 5px;
   border-radius: 10px;
@@ -105,6 +105,7 @@ main {
 .details-card {
   background-color: black;
   color: white;
+  font-size: 15;
   border-radius: 15px; /* Adjust the border-radius for curved edges */
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a box shadow */
@@ -126,3 +127,51 @@ main {
   margin-bottom: 10px;
 }
 
+
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Set the container height to full viewport height */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cornflowerblue; /* Blue background color */
+  border-radius: 70%; /* Make it circular */
+  padding: 170px; /* Increased padding for a larger circle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a box shadow */
+}
+
+.login-form label {
+  margin-bottom: 15px; /* Increased margin for better spacing */
+  color: white; /* Text color */
+}
+
+.login-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px; /* Increased margin for better spacing */
+  font-size: 23px; /* Increased font size */
+}
+
+.login-form button {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: white; /* Button background color */
+  color: cornflowerblue; /* Button text color */
+  cursor: pointer;
+  font-size: 25px; /* Increased font size */
+}
+
+.login-form button:hover {
+  background-color: darkblue; /* Button background color on hover */
+  color: white; /* Button text color on hover */
+}
