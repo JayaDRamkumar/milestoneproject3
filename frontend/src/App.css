@@ -44,7 +44,15 @@ nav a:hover {
   color: rgb(52, 52, 178);
   text-decoration: none;
 }
-
+.navbar-custom {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+.navbar-custom .nav-link + .nav-link {
+  margin-left: 50px; /* Adjust the margin as needed for the desired spacing */
+}
+.navbar-custom .navbar-brand {
+  font-style: italic;
+}
 body {
   background-color: lightblue;
   text-align: center;
