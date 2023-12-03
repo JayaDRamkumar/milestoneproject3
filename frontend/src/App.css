@@ -128,8 +128,17 @@ main {
 }
 
 
+.text {
+  font-size: 30px; /* Adjust the font size as needed */
+}
 
-
+h2.no-underline {
+  font-size: 40px; /* Adjust the font size as needed */
+}
+h2 {
+  font-size: 40px; /* Adjust the font size as needed */
+  background-color: cornflowerblue
+}
 .login-container {
   display: flex;
   flex-direction: column;
@@ -174,4 +183,60 @@ main {
 .login-form button:hover {
   background-color: darkblue; /* Button background color on hover */
   color: white; /* Button text color on hover */
+}
+
+
+
+.ApplyNowForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px; /* Adjust the height as needed */
+  width: 550px; /* Adjust the width as needed */
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: auto; /* Center the circle on the page */
+  position: absolute; /* Position absolute for centering */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ApplyNowForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ApplyNowForm label {
+  margin: 10px 0;
+}
+
+.ApplyNowForm input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  font-size: 30px; /* Adjust the font size as needed */
+}
+
+.ApplyNowForm button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: cornflowerblue;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ApplyNowForm button:hover {
+  background-color: darkblue;
+  color: white;
 }

@@ -48,8 +48,8 @@ function LocationDetails() {
           </div>
           <div className="details-text">
             <h2>{locationDetails.address}</h2>
-            <p className="text">{locationDetails.state}</p>
-            <p className="text">{locationDetails.zipcode}</p>
+            <p className="text">{locationDetails.state}, {locationDetails.zipcode}</p>
+
             <p className="text">{locationDetails.bedroomsandbathrooms}</p>
             <button onClick={handleApplyNow}>Apply Now</button>
           </div>

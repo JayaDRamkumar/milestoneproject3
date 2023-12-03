@@ -1,4 +1,6 @@
+// ApplyNowForm.js
 import React, { useState } from 'react';
+
 
 const ApplyNowForm = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,7 @@ const ApplyNowForm = () => {
   };
 
   return (
-    <div>
+    <div className="ApplyNowForm">
       <h2>Apply Now Form</h2>
       <form onSubmit={handleSubmit}>
         <label>

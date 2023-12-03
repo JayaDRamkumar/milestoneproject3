@@ -50,6 +50,7 @@ function Home() {
           {locations?.map((location) => (
             <div className="col-sm-6 location-box" key={location._id}>
               <img style={{ width: '100%' }} src={location.propertyimage} alt={location.address} />
+              
               <h2 className="no-underline">
                 <Link to={`/location/${location._id}`}>{location.address}</Link>
               </h2>
