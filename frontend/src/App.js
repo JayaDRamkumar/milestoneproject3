@@ -7,6 +7,7 @@ import AddLocation from "./components/NewLocationForm"
 import ApplyNowForm from './components/ApplyNowForm';
 import AppNavbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
 
 function App() {
   return (
