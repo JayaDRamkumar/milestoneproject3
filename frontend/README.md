@@ -1,5 +1,5 @@
 LR LAKE HOLDING INC
-
+By: Jaya Ramkumar
 Inspiration:
 - I inherited a real estate buisness in which I rent properties to many different tenants. I found it hard to advertise and show tenants houses while living a couple hours away and then vetting them and getting all their information to run a background check and decide if they are sutiable tenants. This app was build in the intentions to elivate that problems and have the tenants see the properties and input their information in a quick and seemless way. 
 
