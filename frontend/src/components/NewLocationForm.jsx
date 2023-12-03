@@ -35,6 +35,7 @@ function NewLocationForm() {
 
   return (
     <main>
+       <div className="NewLocationForm">
       <h1>Add a New Location</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -99,7 +100,9 @@ function NewLocationForm() {
         <br />
         <button type="submit">Add Location</button>
       </form>
+      </div>
     </main>
+    
   );
 }
 
