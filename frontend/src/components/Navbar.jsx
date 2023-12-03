@@ -9,7 +9,7 @@ function AppNavbar() {
       <Nav>
         <Nav.Link as={Link} to="/">Home</Nav.Link>
         <span className="mr-10"></span> {/* Add a span with margin for spacing */}
-        <Nav.Link as={Link} to="/myapplications">My Applications</Nav.Link>
+        <Nav.Link as={Link} to="/myapplications">____ My Applications</Nav.Link>
       </Nav>
     </Navbar>
   );

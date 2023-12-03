@@ -52,6 +52,7 @@ nav a:hover {
 }
 .navbar-custom .navbar-brand {
   font-style: italic;
+  font-family:cursive;
 }
 body {
   background-color: lightblue;
